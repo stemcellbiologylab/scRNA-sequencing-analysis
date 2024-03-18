@@ -70,7 +70,7 @@ young<- RunPCA(young, features = VariableFeatures(object = young))
 
 #cell cycle analysis
 
-cc_file <- getURL("https://raw.githubusercontent.com/hbc/tinyatlas/master/cell_cycle/Homo_sapiens.csv") 
+cc_file <- getURL("https://raw.githubusercontent.com/hbc/tinyatlas/master/cell_cycle/mus_musculus.csv") 
 cell_cycle_genes <- read.csv(text = cc_file)
 # Get gene names for Ensembl IDs for each gene
 cell_cycle_markers <- dplyr::left_join(cell_cycle_genes, annotations, by = c("geneID" = "gene_id"))
